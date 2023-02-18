@@ -1,5 +1,5 @@
-export './Dining.dart';
-export './Finance.dart';
+export 'Alarm.dart';
+export 'Notifications.dart';
 export './Home.dart';
-export './Residence.dart';
-export './Tracking.dart';
+export 'Post.dart';
+export 'Account.dart';
