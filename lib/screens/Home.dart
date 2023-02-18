@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(25.0),
       child: Text(
-        'Home',
+        'To Do',
         style: TextStyle(fontSize: 36.0),
       ),
     );

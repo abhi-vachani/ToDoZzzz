@@ -22,6 +22,12 @@ class MyAppState extends State<MyApp> {
     AccountPage(),
   ];
 
+  // Widget newbuild(BuildContext context) {
+  //   return Scaffold(
+  //     backgroundColor: Colors.amberAccent, //<-- SEE HERE
+  //   );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

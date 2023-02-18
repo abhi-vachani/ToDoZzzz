@@ -8,7 +8,7 @@ class AccountPage extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(25.0),
       child: Text(
-        'Account',
+        'Your Account',
         style: TextStyle(fontSize: 36.0),
       ),
     );
