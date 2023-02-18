@@ -48,15 +48,15 @@ class MyAppState extends State<MyApp> {
                 });
               },
               items: [
-                BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
+                BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.fastfood), label: 'food'),
+                    icon: Icon(Icons.access_alarm), label: 'Alarm'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.attach_money), label: 'finance'),
+                    icon: Icon(Icons.format_list_bulleted_add), label: 'Post'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.house), label: 'residence'),
+                    icon: Icon(Icons.circle_notifications), label: 'Notifications'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.directions_bus), label: 'tracker'),
+                    icon: Icon(Icons.account_circle_outlined), label: 'Account'),
               ],
             )));
   }
