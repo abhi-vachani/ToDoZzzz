@@ -32,7 +32,7 @@ class MyAppState extends State<MyApp> {
         ),
         home: Scaffold(
             appBar: AppBar(
-              title: Text("GetReady"),
+              title: Text("GetReady2"),
             ),
             body: _pageOptions[_selectedPage],
             bottomNavigationBar: BottomNavigationBar(
