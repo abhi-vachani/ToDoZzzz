@@ -10,12 +10,11 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: const <Widget>[
           ListTile(
-            title:
-                Text('Grocery', style: TextStyle(color: Colors.deepPurpleAccent)),
+            title: Text('Grocery',
+                style: TextStyle(color: Colors.deepPurpleAccent)),
           ),
           ListTile(
-            title:
-                Text('HW', style: TextStyle(color: Colors.deepPurpleAccent)),
+            title: Text('HW', style: TextStyle(color: Colors.deepPurpleAccent)),
           ),
           ListTile(
             title:
