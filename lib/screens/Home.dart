@@ -65,8 +65,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: tdBGColor,
-      appBar: _buildAppBar(),
+      backgroundColor: Colors.black,
+      // appBar: _buildAppBar(),
       body: Stack(
         children: [
           Container(
@@ -76,28 +76,28 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 15),
                   decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.deepPurpleAccent,
                       borderRadius: BorderRadius.circular(20)),
-                  child: TextField(
-                    onChanged: (value) => _runFilter(value),
-                    decoration: InputDecoration(
-                      contentPadding: EdgeInsets.all(0),
-                      prefixIcon: Icon(
-                        Icons.search,
-                        color: tdBlack,
-                        size: 20,
-                      ),
-                      prefixIconConstraints: BoxConstraints(
-                        maxHeight: 20,
-                        minWidth: 25,
-                      ),
-                      border: InputBorder.none,
-                      hintText: 'Search',
-                      hintStyle: TextStyle(
-                        color: tdGrey,
-                      ),
-                    ),
-                  ),
+                  // child: TextField(
+                  //   onChanged: (value) => _runFilter(value),
+                  //   decoration: InputDecoration(
+                  //     contentPadding: EdgeInsets.all(0),
+                  //     prefixIcon: Icon(
+                  //       Icons.search,
+                  //       color: tdBlack,
+                  //       size: 20,
+                  //     ),
+                  //     prefixIconConstraints: BoxConstraints(
+                  //       maxHeight: 20,
+                  //       minWidth: 25,
+                  //     ),
+                  //     border: InputBorder.none,
+                  //     hintText: 'Search',
+                  //     hintStyle: TextStyle(
+                  //       color: tdGrey,
+                  //     ),
+                  //   ),
+                  // ),
                 ),
                 Expanded(
                   child: ListView(
@@ -108,8 +108,9 @@ class _HomePageState extends State<HomePage> {
                           bottom: 20,
                         ),
                         child: Text(
-                          'All ToDos',
+                          "All To-Do's",
                           style: TextStyle(
+                            color: Colors.deepPurpleAccent,
                             fontSize: 35,
                             fontWeight: FontWeight.w500,
                           ),
@@ -143,10 +144,10 @@ class _HomePageState extends State<HomePage> {
                       vertical: 5,
                     ),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Color.fromARGB(255, 48, 34, 85),
                       boxShadow: const [
                         BoxShadow(
-                          color: Colors.grey,
+                          color: Colors.deepPurpleAccent,
                           offset: Offset(0.0, 0.0),
                           blurRadius: 10.0,
                           spreadRadius: 0.0,
@@ -155,9 +156,11 @@ class _HomePageState extends State<HomePage> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: TextField(
+                      style: TextStyle(color: Colors.grey),
                       controller: _todoController,
                       decoration: InputDecoration(
                           hintText: 'Add a new todo item',
+                          hintStyle: TextStyle(color: Colors.grey),
                           border: InputBorder.none),
                     ),
                   ),
@@ -192,15 +195,15 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  AppBar _buildAppBar() {
-    return AppBar(
-      backgroundColor: tdBGColor,
-      elevation: 0,
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      ),
-    );
-  }
+//   AppBar _buildAppBar() {
+//     return AppBar(
+//       backgroundColor: tdBGColor,
+//       elevation: 0,
+//       title: Row(
+//         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//       ),
+//     );
+//   }
 }
 
 // class SocialMediaFeed extends StatefulWidget {
