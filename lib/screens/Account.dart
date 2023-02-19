@@ -51,7 +51,7 @@ class AccountPage extends StatelessWidget {
                     ),
                     Padding(
                       padding: EdgeInsets.all(8),
-                      child: Text("Name: Zark Markerberg\nBio:\nProductivity Goals:",
+                      child: Text("Name: Zark Markerberg\nBio: Meta Founder\nProductivity Goals: Building the Metaverse",
                           style: TextStyle(
                           fontSize: 16,
                           color: Colors.black,
