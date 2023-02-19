@@ -7,8 +7,8 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     // Simple To Do List: Need to add a way for user to input
     const title = 'To Do List';
-
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: title,
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.black,
