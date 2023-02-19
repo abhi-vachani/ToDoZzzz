@@ -26,20 +26,20 @@ class MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'GetReady',
+        title: 'ToDoZzz',
         theme: ThemeData(
           primarySwatch: Colors.purple,
           scaffoldBackgroundColor: Colors.black,
         ),
         home: Scaffold(
             appBar: AppBar(
-              title: Text("GetReady2"),
+              title: Text("ToDoZzz"),
             ),
             body: _pageOptions[_selectedPage],
             bottomNavigationBar: BottomNavigationBar(
               selectedIconTheme: IconThemeData(size: 40, opacity: .8),
               unselectedIconTheme: IconThemeData(size: 25, opacity: .8),
-              selectedItemColor: Colors.blue[900],
+              selectedItemColor: Color.fromARGB(255, 93, 19, 143),
               unselectedItemColor: Colors.grey,
               showUnselectedLabels: true,
               currentIndex: _selectedPage,
@@ -49,16 +49,24 @@ class MyAppState extends State<MyApp> {
                 });
               },
               items: [
-                BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.access_alarm), label: 'Alarm'),
+                    icon: Icon(Icons.home),
+                    backgroundColor: Color.fromARGB(255, 15, 0, 39),
+                    label: 'Home'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.format_list_bulleted_add), label: 'Post'),
+                    icon: Icon(Icons.access_alarm),
+                    backgroundColor: Color.fromARGB(255, 15, 0, 39),
+                    label: 'Alarm'),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.format_list_bulleted_add),
+                    backgroundColor: Color.fromARGB(255, 15, 0, 39),
+                    label: 'Post'),
                 BottomNavigationBarItem(
                     icon: Icon(Icons.circle_notifications),
                     label: 'Notifications'),
                 BottomNavigationBarItem(
                     icon: Icon(Icons.account_circle_outlined),
+                    backgroundColor: Color.fromARGB(255, 21, 0, 56),
                     label: 'Account'),
               ],
             )));
