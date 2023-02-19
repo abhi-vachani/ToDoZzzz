@@ -5,6 +5,12 @@ import 'package:flutter/material.dart';
 // void main() => runApp(MyApp());
 
 class PostPage extends StatelessWidget {
+  final List<String> captions = [
+    'Probability Homework: Incomplete.',
+    'Dynamical Systems Assignment: In Progress...',
+    'Winning Local Hackathon: Complete!',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,11 +26,11 @@ class PostPage extends StatelessWidget {
                 height: 200, // Set the height of the tile
                 margin: EdgeInsets.all(8), // Set the margin around the tile
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.deepPurpleAccent,
                   borderRadius: BorderRadius.circular(12),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
+                      color: Colors.deepPurpleAccent.withOpacity(0.5),
                       spreadRadius: 2,
                       blurRadius: 5,
                       offset: Offset(0, 3), // changes position of shadow
@@ -39,8 +45,8 @@ class PostPage extends StatelessWidget {
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage(
-                                'images/image${index + 1}.jpg'), // Replace with the path to your image
-                            fit: BoxFit.cover,
+                                'assets/images/image${index + 1}.png'), // Replace with the path to your image
+                            fit: BoxFit.contain,
                           ),
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(12),
@@ -52,7 +58,7 @@ class PostPage extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.all(8),
                       child: Text(
-                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', // Replace with your text
+                        captions[index], // Replace with your text
                         style: TextStyle(
                           fontSize: 16,
                           color: Colors.black,
@@ -69,88 +75,3 @@ class PostPage extends StatelessWidget {
     );
   }
 }
-
-// import 'package:flutter/material.dart';
-
-// class PostPage extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//         padding: EdgeInsets.all(25.0),
-//         child: MaterialButton(
-//             padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-//             onPressed: () {
-//               // _alarmTimeString = DateFormat('HH:mm').format(DateTime.now());
-//               showModalBottomSheet(
-//                 useRootNavigator: true,
-//                 context: context,
-//                 clipBehavior: Clip.antiAlias,
-//                 shape: RoundedRectangleBorder(
-//                   borderRadius: BorderRadius.vertical(
-//                     top: Radius.circular(24),
-//                   ),
-//                 ),
-//                 builder: (context) {
-//                   return StatefulBuilder(
-//                     builder: (context, setModalState) {
-//                       return Container(
-//                         padding: const EdgeInsets.all(32),
-//                         child: Column(
-//                           children: [
-//                             TextButton(
-//                               onPressed: () async {
-//                                 var selectedTime = await showTimePicker(
-//                                   context: context,
-//                                   initialTime: TimeOfDay.now(),
-//                                 );
-//                                 if (selectedTime != null) {
-//                                   final now = DateTime.now();
-//                                   var selectedDateTime = DateTime(
-//                                       now.year,
-//                                       now.month,
-//                                       now.day,
-//                                       selectedTime.hour,
-//                                       selectedTime.minute);
-//                                   // _alarmTime = selectedDateTime;
-//                                   setModalState(() {
-//                                     // _alarmTimeString = DateFormat('HH:mm').format(selectedDateTime);
-//                                   });
-//                                 }
-//                               },
-//                               child: Text(
-//                                 "Hello!",
-//                                 style: TextStyle(fontSize: 32),
-//                               ),
-//                             ),
-//                             // ListTile(
-//                             //   title: Text('Repeat'),
-//                             //   trailing: Switch(
-//                             //     onChanged: (value) {
-
-//                             //   ),
-//                             // ),
-//                             ListTile(
-//                               title: Text('Sound'),
-//                               trailing: Icon(Icons.arrow_forward_ios),
-//                             ),
-//                             ListTile(
-//                               title: Text('Title'),
-//                               trailing: Icon(Icons.arrow_forward_ios),
-//                             ),
-//                             // FloatingActionButton.extended(
-//                             //   onPressed: () {
-//                             //     onSaveAlarm(_isRepeatSelected);
-//                             //   },
-//                             //   icon: Icon(Icons.alarm),
-//                             //   label: Text('Save'),
-//                             // ),
-//                           ],
-//                         ),
-//                       );
-//                     },
-//                   );
-//                 },
-//               );
-//             }));
-//   }
-// }

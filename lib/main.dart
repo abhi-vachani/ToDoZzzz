@@ -18,7 +18,6 @@ class MyAppState extends State<MyApp> {
     HomePage(),
     AlarmPage(),
     PostPage(),
-    NotificationsPage(),
     AccountPage(),
   ];
 
@@ -62,9 +61,6 @@ class MyAppState extends State<MyApp> {
                     icon: Icon(Icons.format_list_bulleted_add),
                     backgroundColor: Color.fromARGB(255, 15, 0, 39),
                     label: 'Post'),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.circle_notifications),
-                    label: 'Notifications'),
                 BottomNavigationBarItem(
                     icon: Icon(Icons.account_circle_outlined),
                     backgroundColor: Color.fromARGB(255, 21, 0, 56),
