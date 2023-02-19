@@ -16,7 +16,7 @@ class MyAppState extends State<MyApp> {
   int _selectedPage = 0;
   final _pageOptions = [
     HomePage(),
-    DiningPage(),
+    Alarm(),
     FinancesPage(),
     ResidencePage(),
     TrackingPage(),
@@ -28,7 +28,7 @@ class MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
         title: 'GetReady',
         theme: ThemeData(
-          primarySwatch: Colors.pink,
+          primarySwatch: Colors.blue,
         ),
         home: Scaffold(
             appBar: AppBar(
