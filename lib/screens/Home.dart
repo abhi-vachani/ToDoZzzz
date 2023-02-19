@@ -7,6 +7,8 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     // Simple To Do List: Need to add a way for user to input
     const title = 'To Do List';
+    var userToDo = ['eat', 'sleep', 'laugh'];
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: title,
@@ -17,21 +19,19 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text(title),
         ),
-        body: ListView(
-          children: const <Widget>[
-            ListTile(
-              title:
-                  Text('Map', style: TextStyle(color: Colors.deepPurpleAccent)),
-            ),
-            ListTile(
-              title: Text('Album',
-                  style: TextStyle(color: Colors.deepPurpleAccent)),
-            ),
-            ListTile(
-              title: Text('Phone',
-                  style: TextStyle(color: Colors.deepPurpleAccent)),
-            ),
-          ],
+        body: ListView.separated(
+          separatorBuilder: (BuildContext context, int index) {
+            return Divider();
+          },
+          padding: const EdgeInsets.all(10),
+          itemCount: userToDo.length,
+          itemBuilder: (BuildContext context, int index) {
+            return Container(
+              height: 50,
+              color: Colors.amber,
+              child: Center(child: Text(userToDo[index])),
+            );
+          },
         ),
       ),
     );
