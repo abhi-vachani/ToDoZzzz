@@ -5,11 +5,29 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(25.0),
-      child: Text(
-        'Home',
-        style: TextStyle(fontSize: 36.0),
+
+    // Simple To Do List: Need to add a way for user to input
+    const title = 'To Do List';
+
+    return MaterialApp(
+      title: title,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text(title),
+        ),
+        body: ListView(
+          children: const <Widget>[
+            ListTile(
+              title: Text('Map'),
+            ),
+            ListTile(
+              title: Text('Album'),
+            ),
+            ListTile(
+              title: Text('Phone'),
+            ),
+          ],
+        ),
       ),
     );
   }

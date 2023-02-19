@@ -1,10 +1,11 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_alarm_clock/flutter_alarm_clock.dart';
 
 
-class Alarm extends StatelessWidget {
+class AlarmPage extends StatelessWidget {
 
 // creating text ediiting controller to take hour
 // and minute as input
@@ -125,6 +126,7 @@ class Alarm extends StatelessWidget {
       ),
       )
     ])),
+
     );
   }
 }

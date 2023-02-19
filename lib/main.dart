@@ -16,10 +16,10 @@ class MyAppState extends State<MyApp> {
   int _selectedPage = 0;
   final _pageOptions = [
     HomePage(),
-    Alarm(),
-    FinancesPage(),
-    ResidencePage(),
-    TrackingPage(),
+    AlarmPage(),
+    PostPage(),
+    NotificationsPage(),
+    AccountPage(),
   ];
 
   @override
@@ -54,9 +54,11 @@ class MyAppState extends State<MyApp> {
                 BottomNavigationBarItem(
                     icon: Icon(Icons.format_list_bulleted_add), label: 'Post'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.circle_notifications), label: 'Notifications'),
+                    icon: Icon(Icons.circle_notifications),
+                    label: 'Notifications'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.account_circle_outlined), label: 'Account'),
+                    icon: Icon(Icons.account_circle_outlined),
+                    label: 'Account'),
               ],
             )));
   }
