@@ -22,19 +22,14 @@ class MyAppState extends State<MyApp> {
     AccountPage(),
   ];
 
-  // Widget newbuild(BuildContext context) {
-  //   return Scaffold(
-  //     backgroundColor: Colors.amberAccent, //<-- SEE HERE
-  //   );
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'DRFT',
         theme: ThemeData(
-          primarySwatch: Colors.pink,
+          primarySwatch: Colors.purple,
+          scaffoldBackgroundColor: Colors.black,
         ),
         home: Scaffold(
             appBar: AppBar(

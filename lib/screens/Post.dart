@@ -9,7 +9,7 @@ class PostPage extends StatelessWidget {
       padding: EdgeInsets.all(25.0),
       child: Text(
         'Posts',
-        style: TextStyle(fontSize: 36.0),
+        style: TextStyle(fontSize: 36.0, color: Colors.deepPurpleAccent),
       ),
     );
   }

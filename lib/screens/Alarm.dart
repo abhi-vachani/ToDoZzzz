@@ -9,7 +9,7 @@ class AlarmPage extends StatelessWidget {
       padding: EdgeInsets.all(25.0),
       child: Text(
         'Alarm',
-        style: TextStyle(fontSize: 36.0),
+        style: TextStyle(fontSize: 36.0, color: Colors.deepPurpleAccent),
       ),
     );
   }
