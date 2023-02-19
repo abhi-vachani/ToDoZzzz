@@ -38,7 +38,7 @@ class AccountPage extends StatelessWidget {
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage(
-                                'images/mark.jpeg'), // Replace with the path to your image
+                                'assets/images/mark.jpeg'), // Replace with the path to your image
                             fit: BoxFit.cover,
                           ),
                           borderRadius: BorderRadius.only(
