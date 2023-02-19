@@ -24,7 +24,7 @@ class PostPage extends StatelessWidget {
                 3, // Replace 10 with the number of items you want to display
             itemBuilder: (BuildContext context, int index) {
               return Container(
-                height: 200, // Set the height of the tile
+                height: 500, // Set the height of the tile
                 margin: EdgeInsets.all(8), // Set the margin around the tile
                 decoration: BoxDecoration(
                   color: Colors.deepPurpleAccent,
@@ -47,7 +47,7 @@ class PostPage extends StatelessWidget {
                           image: DecorationImage(
                             image: AssetImage(
                                 'assets/images/image${index + 1}.png'), // Replace with the path to your image
-                            fit: BoxFit.contain,
+                            fit: BoxFit.cover,
                           ),
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(12),
