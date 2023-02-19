@@ -45,8 +45,8 @@ class PostPage extends StatelessWidget {
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage(
-                                'images/image${index + 1}.png'), // Replace with the path to your image
-                            fit: BoxFit.cover,
+                                'assets/images/image${index + 1}.png'), // Replace with the path to your image
+                            fit: BoxFit.contain,
                           ),
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(12),
