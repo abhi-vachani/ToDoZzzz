@@ -14,10 +14,7 @@ class AlarmPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    appBar: AppBar(
-      title: const Text('Title'),
-      centerTitle: true,
-    ),
+      
     body: Center(
       child: Column(children: <Widget>[
       const SizedBox(height: 30),
