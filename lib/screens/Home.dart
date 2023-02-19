@@ -11,15 +11,15 @@ class HomePage extends StatelessWidget {
         children: const <Widget>[
           ListTile(
             title:
-                Text('Map', style: TextStyle(color: Colors.deepPurpleAccent)),
+                Text('Grocery', style: TextStyle(color: Colors.deepPurpleAccent)),
           ),
           ListTile(
             title:
-                Text('Album', style: TextStyle(color: Colors.deepPurpleAccent)),
+                Text('HW', style: TextStyle(color: Colors.deepPurpleAccent)),
           ),
           ListTile(
             title:
-                Text('Phone', style: TextStyle(color: Colors.deepPurpleAccent)),
+                Text('Gym', style: TextStyle(color: Colors.deepPurpleAccent)),
           ),
         ],
       ),
