@@ -68,6 +68,7 @@ assets:
   - images/image1.jpg
   - images/image2.jpg
   - images/image3.jpg
+  - images/mark.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
