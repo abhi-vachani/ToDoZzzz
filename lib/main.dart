@@ -28,7 +28,8 @@ class MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
         title: 'GetReady',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.purple,
+          scaffoldBackgroundColor: Colors.black,
         ),
         home: Scaffold(
             appBar: AppBar(
