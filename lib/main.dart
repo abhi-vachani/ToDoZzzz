@@ -33,6 +33,7 @@ class MyAppState extends State<MyApp> {
         home: Scaffold(
             appBar: AppBar(
               title: Text("ToDoZzz"),
+              centerTitle: true,
             ),
             body: _pageOptions[_selectedPage],
             bottomNavigationBar: BottomNavigationBar(

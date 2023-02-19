@@ -65,8 +65,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: tdBGColor,
-      appBar: _buildAppBar(),
+      backgroundColor: Colors.black,
+      // appBar: _buildAppBar(),
       body: Stack(
         children: [
           Container(
@@ -76,28 +76,28 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 15),
                   decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.deepPurpleAccent,
                       borderRadius: BorderRadius.circular(20)),
-                  child: TextField(
-                    onChanged: (value) => _runFilter(value),
-                    decoration: InputDecoration(
-                      contentPadding: EdgeInsets.all(0),
-                      prefixIcon: Icon(
-                        Icons.search,
-                        color: tdBlack,
-                        size: 20,
-                      ),
-                      prefixIconConstraints: BoxConstraints(
-                        maxHeight: 20,
-                        minWidth: 25,
-                      ),
-                      border: InputBorder.none,
-                      hintText: 'Search',
-                      hintStyle: TextStyle(
-                        color: tdGrey,
-                      ),
-                    ),
-                  ),
+                  // child: TextField(
+                  //   onChanged: (value) => _runFilter(value),
+                  //   decoration: InputDecoration(
+                  //     contentPadding: EdgeInsets.all(0),
+                  //     prefixIcon: Icon(
+                  //       Icons.search,
+                  //       color: tdBlack,
+                  //       size: 20,
+                  //     ),
+                  //     prefixIconConstraints: BoxConstraints(
+                  //       maxHeight: 20,
+                  //       minWidth: 25,
+                  //     ),
+                  //     border: InputBorder.none,
+                  //     hintText: 'Search',
+                  //     hintStyle: TextStyle(
+                  //       color: tdGrey,
+                  //     ),
+                  //   ),
+                  // ),
                 ),
                 Expanded(
                   child: ListView(
@@ -108,8 +108,9 @@ class _HomePageState extends State<HomePage> {
                           bottom: 20,
                         ),
                         child: Text(
-                          'ToDos',
+                          'All ToDos',
                           style: TextStyle(
+                            color: Colors.deepPurpleAccent,
                             fontSize: 35,
                             fontWeight: FontWeight.w500,
                           ),
@@ -143,10 +144,10 @@ class _HomePageState extends State<HomePage> {
                       vertical: 5,
                     ),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Color.fromARGB(255, 48, 34, 85),
                       boxShadow: const [
                         BoxShadow(
-                          color: Colors.grey,
+                          color: Colors.deepPurpleAccent,
                           offset: Offset(0.0, 0.0),
                           blurRadius: 10.0,
                           spreadRadius: 0.0,
@@ -155,9 +156,11 @@ class _HomePageState extends State<HomePage> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: TextField(
+                      style: TextStyle(color: Colors.grey),
                       controller: _todoController,
                       decoration: InputDecoration(
                           hintText: 'Add a new todo item',
+                          hintStyle: TextStyle(color: Colors.grey),
                           border: InputBorder.none),
                     ),
                   ),
@@ -191,15 +194,112 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-
-  AppBar _buildAppBar() {
-    return AppBar(
-      backgroundColor: tdBGColor,
-      elevation: 0,
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      ),
-    );
-  }
 }
 
+// class SocialMediaFeed extends StatefulWidget {
+//   @override
+//   _SocialMediaFeedState createState() => _SocialMediaFeedState();
+  
+// }
+
+// class _SocialMediaFeedState extends State<SocialMediaFeed> {
+//   List<Post> posts = [
+//     Post(
+//         username: 'JohnDoe',
+//         message: 'This is my first post!',
+//         imageUrl: 'https://picsum.photos/200',
+//         upvotes: 0,
+//         downvotes: 0),
+//     Post(
+//         username: 'JaneDoe',
+//         message: 'I love this app!',
+//         imageUrl: 'https://picsum.photos/201',
+//         upvotes: 0,
+//         downvotes: 0),
+//   ];
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('Social Media Feed'),
+//       ),
+//       body: ListView.builder(
+//         itemCount: posts.length,
+//         itemBuilder: (BuildContext context, int index) {
+//           return PostWidget(
+//             post: posts[index],
+//           );
+//         },
+//       ),
+//       floatingActionButton: FloatingActionButton(
+//         onPressed: () {
+//           // Code to create a new post
+//         },
+//         child: Icon(Icons.add),
+//       ),
+//     );
+//   }
+// }
+
+// class Post {
+//   String username;
+//   String message;
+//   String imageUrl;
+//   int upvotes;
+//   int downvotes;
+
+//   constructor(){
+//     this.username = username; 
+//     this.message = message; 
+//     this.imageUrl = imageUrl; 
+//     this.upvotes = upvotes; 
+//     this.downvotes = downvotes; 
+//   }
+  
+
+//   Post({this.username, this.message, this.imageUrl, this.upvotes, this.downvotes});
+// }
+
+// class PostWidget extends StatelessWidget {
+//   final Post post;
+
+//   PostWidget({this.post});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Card(
+//       child: Column(
+//         children: [
+//           ListTile(
+//             title: Text(post.username),
+//             subtitle: Text(post.message),
+//           ),
+//           Image.network(post.imageUrl),
+//           Row(
+//             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//             children: [
+//               IconButton(
+//                   icon: Icon(Icons.thumb_up),
+//                   onPressed: () {
+//                     // Code to upvote the post
+//                   }),
+//               Text(post.upvotes.toString()),
+//               IconButton(
+//                   icon: Icon(Icons.thumb_down),
+//                   onPressed: () {
+//                     // Code to downvote the post
+//                   }),
+//               Text(post.downvotes.toString()),
+//               IconButton(
+//                   icon: Icon(Icons.message),
+//                   onPressed: () {
+//                     // Code to open messaging with the post's author
+//                   }),
+//             ],
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
