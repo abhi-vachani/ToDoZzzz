@@ -26,14 +26,14 @@ class MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'DRFT',
+        title: 'GetReady',
         theme: ThemeData(
           primarySwatch: Colors.purple,
           scaffoldBackgroundColor: Colors.black,
         ),
         home: Scaffold(
             appBar: AppBar(
-              title: Text("DRFT app"),
+              title: Text("GetReady2"),
             ),
             body: _pageOptions[_selectedPage],
             bottomNavigationBar: BottomNavigationBar(
