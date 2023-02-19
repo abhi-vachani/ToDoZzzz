@@ -14,6 +14,7 @@ class PostPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Your Feed',
       home: Scaffold(
         backgroundColor: Colors.black,
